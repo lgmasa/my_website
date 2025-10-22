@@ -1,11 +1,11 @@
 <style>
   :root{
-    --bg:#ffeb3b;         /* 明るい黄色：背景 */
-    --fg:#000000;         /* メインの文字は黒 */
-    --muted:#333333;      /* 少し薄い黒（補助テキスト） */
-    --accent:#ffffff;     /* 白：見出しやリンクの強調色 */
-    --border:#000000;     /* 区切り線を黒で */
-    --chip:#fff176;       /* スキルタグの少し淡い黄色 */
+    --bg:#f7d547;         /* 少し落ち着いた黄色（背景） */
+    --fg:#000000;         /* メイン文字：黒 */
+    --muted:#1f1f1f;      /* 薄めの黒（補助テキスト） */
+    --accent:#ffffff;     /* 白：見出し・強調 */
+    --border:#000000;     /* 区切り線：黒 */
+    --chip:#fff3a0;       /* タグ背景：淡い黄色 */
   }
 
   *{box-sizing:border-box}
@@ -14,7 +14,7 @@
     padding:0;
     background:var(--bg);
     color:var(--fg);
-    font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji",sans-serif;
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans JP","Apple Color Emoji","Segoe UI Emoji",sans-serif;
     line-height:1.6;
   }
 
@@ -24,7 +24,10 @@
     border-bottom:2px solid var(--fg);
     font-weight:600;
   }
-  a:hover{color:var(--accent);background:var(--fg);}
+  a:hover{
+    color:var(--accent);
+    background:var(--fg);
+  }
 
   .container{max-width:900px;margin:28px auto;padding:0 20px}
   header{text-align:center;margin-bottom:24px}
@@ -52,50 +55,4 @@
     text-transform:uppercase;
     letter-spacing:.04em;
     color:var(--accent);
-    background:var(--fg);
-    padding:4px 10px;
-    display:inline-block;
-    border-radius:4px;
-  }
-
-  .two-col{display:grid;grid-template-columns:1fr auto;gap:8px 14px;align-items:baseline}
-  .edu-item,.job{margin:12px 0}
-  .where{font-weight:700}
-  .when{color:var(--muted);font-size:.95rem;white-space:nowrap}
-
-  ul{margin:6px 0 10px 16px;padding:0}
-  li{margin:4px 0}
-
-  .skills dt{
-    font-weight:700;
-    background:var(--fg);
-    color:var(--accent);
-    display:inline-block;
-    padding:2px 8px;
-    border-radius:4px;
-  }
-  .skills dd{margin:4px 0 10px 0}
-  .chip{
-    display:inline-block;
-    background:var(--chip);
-    padding:.2rem .6rem;
-    border-radius:999px;
-    margin:2px 6px 0 0;
-    font-size:.9rem;
-    border:1px solid var(--fg);
-  }
-
-  footer{
-    margin:26px 0;
-    text-align:center;
-    color:var(--muted);
-    font-size:.92rem;
-    border-top:3px solid var(--border);
-    padding-top:10px;
-  }
-
-  @media (max-width:640px){
-    .two-col{grid-template-columns:1fr}
-    .when{justify-self:start}
-  }
-</style>
+    background:var(
