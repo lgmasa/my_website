@@ -13,15 +13,53 @@
       --bg:#ffffff;
       --chip:#eef2ff;
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji",sans-serif;line-height:1.6}
-    a{color:var(--accent);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .container{max-width:900px;margin:28px auto;padding:0 20px}
+
+    *{box-sizing:border-box;scroll-behavior:smooth;}
+    html,body{
+      margin:0;
+      padding:0;
+      background:var(--bg);
+      color:var(--fg);
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans JP","Apple Color Emoji","Segoe UI Emoji",sans-serif;
+      line-height:1.6;
+    }
+
+    /* ===== ナビゲーションバー ===== */
+    nav{
+      position:fixed;
+      top:0;
+      left:0;
+      right:0;
+      background:var(--accent);
+      color:white;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:20px;
+      padding:10px;
+      z-index:1000;
+      box-shadow:0 2px 5px rgba(0,0,0,0.1);
+    }
+    nav a{
+      color:white;
+      text-decoration:none;
+      font-weight:bold;
+      text-transform:uppercase;
+      font-size:0.9rem;
+      letter-spacing:0.05em;
+    }
+    nav a:hover{
+      text-decoration:underline;
+    }
+
+    /* コンテンツ部分に余白（ナビ分）を追加 */
+    .container{max-width:900px;margin:80px auto 28px auto;padding:0 20px}
+
     header{text-align:center;margin-bottom:24px}
     header h1{font-size:2.2rem;line-height:1.2;margin:0}
     header .links{margin-top:10px;font-size:0.95rem;color:var(--muted)}
     header .links a{margin:0 8px;white-space:nowrap}
+
     section{margin:26px 0;padding-bottom:6px;border-bottom:1px solid var(--border)}
     section:last-of-type{border-bottom:none}
     h2{font-size:1.25rem;margin:0 0 10px 0;text-transform:uppercase;letter-spacing:.04em}
@@ -35,13 +73,25 @@
     .skills dd{margin:2px 0 10px 0}
     .chip{display:inline-block;background:var(--chip);padding:.15rem .5rem;border-radius:999px;margin:2px 6px 0 0;font-size:.9rem}
     footer{margin:26px 0;text-align:center;color:var(--muted);font-size:.92rem}
+
     @media (max-width:640px){
+      nav{flex-wrap:wrap;gap:10px;font-size:0.8rem;}
       .two-col{grid-template-columns:1fr}
       .when{justify-self:start}
     }
   </style>
 </head>
 <body>
+  <!-- ===== ナビゲーションバー ===== -->
+  <nav>
+    <a href="#summary">Summary</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#hobby">Hobby</a>
+  </nav>
+
   <div class="container">
     <header>
       <h1>Yuta Nakanishi</h1>
