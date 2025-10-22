@@ -1,11 +1,11 @@
 <style>
   :root{
-    --bg:#f7d547;         /* 少し落ち着いた黄色（背景） */
-    --fg:#000000;         /* メイン文字：黒 */
-    --muted:#1f1f1f;      /* 薄めの黒（補助テキスト） */
-    --accent:#ffffff;     /* 白：見出し・強調 */
-    --border:#000000;     /* 区切り線：黒 */
-    --chip:#fff3a0;       /* タグ背景：淡い黄色 */
+    --bg:#000000;         /* 背景：黒 */
+    --fg:#ffeb3b;         /* メイン文字：明るい黄色 */
+    --muted:#f5d742;      /* 少し落ち着いた黄色（補助テキスト） */
+    --accent:#fff176;     /* 見出し・リンクなどの明るいアクセント黄色 */
+    --border:#444444;     /* 区切り線：薄いグレー */
+    --chip:#1a1a1a;       /* スキルタグ背景：黒に近いグレー */
   }
 
   *{box-sizing:border-box}
@@ -19,14 +19,13 @@
   }
 
   a{
-    color:var(--fg);
+    color:var(--accent);
     text-decoration:none;
-    border-bottom:2px solid var(--fg);
-    font-weight:600;
+    border-bottom:1px solid var(--accent);
   }
   a:hover{
-    color:var(--accent);
-    background:var(--fg);
+    background:var(--accent);
+    color:var(--bg);
   }
 
   .container{max-width:900px;margin:28px auto;padding:0 20px}
@@ -35,7 +34,7 @@
     font-size:2.4rem;
     line-height:1.2;
     margin:0;
-    color:var(--fg);
+    color:var(--accent);
     text-transform:uppercase;
     letter-spacing:.08em;
   }
@@ -45,7 +44,7 @@
   section{
     margin:26px 0;
     padding-bottom:6px;
-    border-bottom:3px solid var(--border);
+    border-bottom:2px solid var(--border);
   }
   section:last-of-type{border-bottom:none}
 
@@ -54,5 +53,52 @@
     margin:0 0 10px 0;
     text-transform:uppercase;
     letter-spacing:.04em;
+    color:var(--bg);
+    background:var(--accent);
+    padding:4px 10px;
+    display:inline-block;
+    border-radius:4px;
+  }
+
+  .two-col{
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:8px 14px;
+    align-items:baseline;
+  }
+  .edu-item,.job{margin:12px 0}
+  .where{font-weight:700}
+  .when{color:var(--muted);font-size:.95rem;white-space:nowrap}
+
+  ul{margin:6px 0 10px 16px;padding:0}
+  li{margin:4px 0}
+
+  .skills dt{
+    font-weight:700;
     color:var(--accent);
-    background:var(
+  }
+  .skills dd{margin:4px 0 10px 0}
+  .chip{
+    display:inline-block;
+    background:var(--chip);
+    padding:.2rem .6rem;
+    border-radius:999px;
+    margin:2px 6px 0 0;
+    font-size:.9rem;
+    border:1px solid var(--accent);
+  }
+
+  footer{
+    margin:26px 0;
+    text-align:center;
+    color:var(--muted);
+    font-size:.92rem;
+    border-top:2px solid var(--border);
+    padding-top:10px;
+  }
+
+  @media (max-width:640px){
+    .two-col{grid-template-columns:1fr}
+    .when{justify-self:start}
+  }
+</style>
