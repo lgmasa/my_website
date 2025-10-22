@@ -1,183 +1,101 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Yuta Nakanishi — CV</title>
-  <style>
-    :root{
-      --fg:#1f2937;
-      --muted:#4b5563;
-      --accent:#0f766e;
-      --border:#e5e7eb;
-      --bg:#ffffff;
-      --chip:#eef2ff;
-    }
-  
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji",sans-serif;line-height:1.6}
-    a{color:var(--accent);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .container{max-width:900px;margin:28px auto;padding:0 20px}
-    header{text-align:center;margin-bottom:24px}
-    header h1{font-size:2.2rem;line-height:1.2;margin:0}
-    header .links{margin-top:10px;font-size:0.95rem;color:var(--muted)}
-    header .links a{margin:0 8px;white-space:nowrap}
-    section{margin:26px 0;padding-bottom:6px;border-bottom:1px solid var(--border)}
-    section:last-of-type{border-bottom:none}
-    h2{font-size:1.25rem;margin:0 0 10px 0;text-transform:uppercase;letter-spacing:.04em}
-    .two-col{display:grid;grid-template-columns:1fr auto;gap:8px 14px;align-items:baseline}
-    .edu-item,.job{margin:12px 0}
-    .where{font-weight:600}
-    .when{color:var(--muted);font-size:.95rem;white-space:nowrap}
-    ul{margin:6px 0 10px 16px;padding:0}
-    li{margin:4px 0}
-    .skills dt{font-weight:700}
-    .skills dd{margin:2px 0 10px 0}
-    .chip{display:inline-block;background:var(--chip);padding:.15rem .5rem;border-radius:999px;margin:2px 6px 0 0;font-size:.9rem}
-    footer{margin:26px 0;text-align:center;color:var(--muted);font-size:.92rem}
-    @media (max-width:640px){
-      .two-col{grid-template-columns:1fr}
-      .when{justify-self:start}
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <header>
-      <h1>Yuta Nakanishi</h1>
-      <div class="links">
-        <a href="https://github.com/lgmasa" target="_blank" rel="noopener">github.com/lgmasa</a> ·
-        <a href="mailto:pvzd5j9b@s.okayama-u.ac.jp">pvzd5j9b@s.okayama-u.ac.jp</a>
-      </div>
-    </header>
+<style>
+  :root{
+    --bg:#ffeb3b;         /* 明るい黄色：背景 */
+    --fg:#000000;         /* メインの文字は黒 */
+    --muted:#333333;      /* 少し薄い黒（補助テキスト） */
+    --accent:#ffffff;     /* 白：見出しやリンクの強調色 */
+    --border:#000000;     /* 区切り線を黒で */
+    --chip:#fff176;       /* スキルタグの少し淡い黄色 */
+  }
 
-    <section id="summary">
-      <h2>Summary</h2>
-      <p>Undergraduate student majoring in Network Engineering at Okayama University, expected to graduate in Mar 2026. Currently conducting research in a security engineering laboratory, focusing on pairing-based cryptography and related security technologies. Seeking a career in the field of cybersecurity, where I can apply my knowledge of cryptographic systems and contribute to the development of secure and reliable systems.</p>
-    </section>
+  *{box-sizing:border-box}
+  html,body{
+    margin:0;
+    padding:0;
+    background:var(--bg);
+    color:var(--fg);
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji",sans-serif;
+    line-height:1.6;
+  }
 
-    <section id="education">
-      <h2>Education</h2>
+  a{
+    color:var(--fg);
+    text-decoration:none;
+    border-bottom:2px solid var(--fg);
+    font-weight:600;
+  }
+  a:hover{color:var(--accent);background:var(--fg);}
 
-      <div class="edu-item two-col">
-        <div class="where">Okayama University — Bachelor of Engineering in Network Engineering</div>
-        <div class="when">Apr 2022 — Mar 2026 (Expected)</div>
-      </div>
+  .container{max-width:900px;margin:28px auto;padding:0 20px}
+  header{text-align:center;margin-bottom:24px}
+  header h1{
+    font-size:2.4rem;
+    line-height:1.2;
+    margin:0;
+    color:var(--fg);
+    text-transform:uppercase;
+    letter-spacing:.08em;
+  }
+  header .links{margin-top:10px;font-size:0.95rem;color:var(--muted)}
+  header .links a{margin:0 8px;white-space:nowrap}
 
-      <div class="edu-item two-col">
-        <div class="where">Kyoto Prefectural Fukuchiyama High School — General Course</div>
-        <div class="when">Apr 2019 — Mar 2022</div>
-      </div>
-    </section>
+  section{
+    margin:26px 0;
+    padding-bottom:6px;
+    border-bottom:3px solid var(--border);
+  }
+  section:last-of-type{border-bottom:none}
 
-    <section id="experience">
-      <h2>Work Experience</h2>
+  h2{
+    font-size:1.25rem;
+    margin:0 0 10px 0;
+    text-transform:uppercase;
+    letter-spacing:.04em;
+    color:var(--accent);
+    background:var(--fg);
+    padding:4px 10px;
+    display:inline-block;
+    border-radius:4px;
+  }
 
-      <div class="job">
-        <div class="two-col">
-          <div class="where">Otoko Udon — Part-time Staff</div>
-          <div class="when">Mar 2024 — present</div>
-        </div>
-        <ul>
-          <li>Prepare and serve udon dishes and provide customer service.</li>
-          <li>Cook and serve “demi-katsu don” (pork cutlet rice bowl with demi-glace sauce).</li>
-        </ul>
-      </div>
+  .two-col{display:grid;grid-template-columns:1fr auto;gap:8px 14px;align-items:baseline}
+  .edu-item,.job{margin:12px 0}
+  .where{font-weight:700}
+  .when{color:var(--muted);font-size:.95rem;white-space:nowrap}
 
-      <div class="job">
-        <div class="two-col">
-          <div class="where">Individual Tutoring Center — Part-time Staff</div>
-          <div class="when">Mar 2023 — Dec 2023</div>
-        </div>
-        <ul>
-          <li>Taught science and mathematics subjects to students ranging from elementary to high school.</li>
-          <li>Supervised mock examinations as a proctor.</li>
-        </ul>
-      </div>
+  ul{margin:6px 0 10px 16px;padding:0}
+  li{margin:4px 0}
 
-      <div class="job">
-        <div class="two-col">
-          <div class="where">Matsuya — Part-time Staff</div>
-          <div class="when">Jun 2022 — Mar 2023</div>
-        </div>
-        <ul>
-          <li>Worked as a hall staff providing customer service, replenishing ingredients, and cleaning the restaurant.</li>
-          <li>Worked in the kitchen, quickly preparing and serving beef bowl dishes and handling take-out orders.</li>
-        </ul>
-      </div>
-    </section>
+  .skills dt{
+    font-weight:700;
+    background:var(--fg);
+    color:var(--accent);
+    display:inline-block;
+    padding:2px 8px;
+    border-radius:4px;
+  }
+  .skills dd{margin:4px 0 10px 0}
+  .chip{
+    display:inline-block;
+    background:var(--chip);
+    padding:.2rem .6rem;
+    border-radius:999px;
+    margin:2px 6px 0 0;
+    font-size:.9rem;
+    border:1px solid var(--fg);
+  }
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <dl class="skills">
-        <dt>Programming Languages</dt>
-        <dd>
-          <span class="chip">C</span>
-          <span class="chip">Python</span>
-        </dd>
+  footer{
+    margin:26px 0;
+    text-align:center;
+    color:var(--muted);
+    font-size:.92rem;
+    border-top:3px solid var(--border);
+    padding-top:10px;
+  }
 
-        <dt>Domains &amp; Concepts</dt>
-        <dd>
-          <span class="chip">Pairing-based Cryptography</span>
-          <span class="chip">Network Engineering</span>
-        </dd>
-
-        <dt>Development Environments</dt>
-        <dd>
-          <span class="chip">VS Code</span>
-          <span class="chip">Arduino IDE</span>
-          <span class="chip">e2studio</span>
-        </dd>
-
-        <dt>Languages</dt>
-        <dd>Japanese (Native), English</dd>
-      </dl>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-
-      <div class="job">
-        <div class="two-col">
-          <div class="where">Implementation of Pairing-based Cryptography</div>
-          <div class="when">Apr 2025 — Present</div>
-        </div>
-        <ul>
-          <li>Implemented optimal ate pairing over BLS12-381 curves in C and verified bilinearity, non-degeneracy, and efficiency properties.</li>
-          <li>Evaluated performance and optimized scalar multiplication and pairing computation for efficiency.</li>
-        </ul>
-      </div>
-
-      <div class="job">
-        <div class="two-col">
-          <div class="where">Smart Trash Can Project</div>
-          <div class="when">Sep 2025</div>
-        </div>
-        <ul>
-          <li>Participated in a hackathon and developed a smart trash can system using JavaScript.</li>
-          <li>Controlled the trash can remotely via a web interface using JavaScript.</li>
-          <li>Built a voice detection feature that triggers a warning light when abusive language is detected.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="hobby">
-      <h2>Hobby</h2>
-      <p><strong>Favorite sports team:</strong> Hanshin Tigers</p>
-    </section>
-
-    <footer>
-      <span>Last updated: <span id="last-updated"></span></span>
-    </footer>
-  </div>
-
-  <script>
-    const d = new Date();
-    const yyyy = d.getFullYear();
-    const mm = String(d.getMonth()+1).padStart(2,'0');
-    const dd = String(d.getDate()).padStart(2,'0');
-    document.getElementById('last-updated').textContent = `${yyyy}-${mm}-${dd}`;
-  </script>
-</body>
-</html>
+  @media (max-width:640px){
+    .two-col{grid-template-columns:1fr}
+    .when{justify-self:start}
+  }
+</style>
